@@ -2,7 +2,5 @@ sudo: required
 services:
   - docker
 
-language: python
-
 script:
   - docker build -t samhornsey/data-science .
