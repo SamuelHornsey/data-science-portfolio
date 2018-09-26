@@ -5,7 +5,7 @@ services:
     image: redis
 
   celery:
-    image: portfolio-work:latest
+    image: samhornsey/data-science:latest
     command: celery worker -A app.celery
     environment:
       - REDIS_HOST=redis
@@ -13,7 +13,7 @@ services:
       - redis
 
   portfolio-work:
-    image: portfolio-work:latest
+    image: samhornsey/data-science:latest
     build: .
     ports:
       - 5000:5000
