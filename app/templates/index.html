@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Model Deployment Example</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Appliance Analysis</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Deployment of Appliance Data Model</h1>
+        <img src="/static/img/house.svg" alt="House" width="50px">
+    </header>
+
+    <section>
+        <div class="message hidden js-error">
+            <p>All parameters must have a value.</p>
+        </div>
+
+        <div>
+            <input class="js-input" type="text" name="lights" placeholder="Lights Energy Usage">
+            <input class="js-input" type="text" name="NSM" placeholder="Number of Seconds From Midnight">
+            <input class="js-input" type="text" name="Press_mm_hg" placeholder="Pressure">
+            <input class="js-input" type="text" name="T_out" placeholder="Temperature Outside">
+            <input class="js-input" type="text" name="RH_out" placeholder="Humidity Outside">
+
+            <br>
+
+            <button class="js-calculate">Calculate</button>
+        </div>
+
+        <div class="hidden js-message">
+            <img class="timer" src="/static/img/timer.svg" alt="Timer" width="30px">
+        </div>
+        <div>
+            <p class="js-result"></p>
+        </div>
+    </section>
+
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
