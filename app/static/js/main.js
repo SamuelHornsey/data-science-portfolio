@@ -21,7 +21,7 @@ const check_for_result = url => {
           ".js-result"
         ).innerHTML = `Your appliance energy usage should be ${Math.round(
           json.result
-        )}`;
+        )}Wh`;
         document.querySelectorAll(".js-input").forEach(input => {
           input.disabled = false;
         });

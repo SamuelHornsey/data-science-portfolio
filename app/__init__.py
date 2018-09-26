@@ -1,10 +1,19 @@
 from flask import Flask, render_template, request
 from celery import Celery
 
+import os
+
 app = Flask(__name__)
 
-app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'
-app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
+if os.environ.get('REDIS_HOST'):
+    redis = 'redis://{}:6379/0'.format(os.environ.get('REDIS_HOST'))
+else:
+    redis = 'redis://{}:6379/0'.format('localhost')
+
+print(redis)
+
+app.config['CELERY_BROKER_URL'] = redis
+app.config['CELERY_RESULT_BACKEND'] = redis
 
 celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'])
 celery.conf.update(app.config)
