@@ -1,5 +1,6 @@
 # Appliance Data Analysis
 
+[![Build Status](https://travis-ci.com/SamuelHornsey/data-science-portfolio.svg?branch=master)](https://travis-ci.com/SamuelHornsey/data-science-portfolio)
 There are 2 main parts to this repo;
 
 1. Jupyter Notebook with data analysis about Appliance energy usage data.
